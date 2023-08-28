@@ -1,0 +1,12 @@
+{% extends 'nav.html' %}
+{%block title%} View Your Todos {%endblock%}
+{%block content%}
+
+<ul>
+{%for todo in todos%}
+
+{% if name.name == todo.user_name %}<li> {{todo.title}}: {%if todo.completed%}Completed {%else%}Not Completed{%endif%} </li>{%endif%}
+
+{%endfor%}
+</ul>
+{%endblock%}

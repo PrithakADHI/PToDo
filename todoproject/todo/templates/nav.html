@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+
+    <title>{% block title %} Default Home Page {% endblock %}</title>
+</head>
+<body>
+    <div class="topnav">
+        <a href="{% url 'home' %}" class="link">Home</a>
+        <a href="{% url 'create' %}" class="link">Create ToDo</a>
+        <a href="{% url 'view' %}" class="link">View ToDo</a>
+    </div>
+    <div class="body"> {% block content %} {% endblock %} </div>
+</body>
+</html>

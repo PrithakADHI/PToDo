@@ -1,0 +1,22 @@
+{% extends "nav.html" %} {%block title%} THE Home Page {%endblock%}
+
+{%block content%} 
+
+<p>This is the Home Page</p>
+
+<p>Click Create ToDo at Top to Create a ToDo</p>
+
+<p>Enter your name on the box below and you can view your ToDo there</p>
+
+<!-- A Form here for entering username, and then redirect the user to view.html -->
+
+<form method="POST">
+
+{% csrf_token %}
+
+{{form.as_p}}
+
+<button class="button1" type="submit">View Your Todos</button>
+</form>
+
+{%endblock%}

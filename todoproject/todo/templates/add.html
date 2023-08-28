@@ -1,0 +1,19 @@
+{%extends "nav.html"%}
+
+{%block title%}Create a ToDo{%endblock%}
+
+{%block content%}
+
+
+
+<form method="POST">
+
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<button type="submit">Submit The ToDo</button>
+
+</form>
+
+{%endblock%}
